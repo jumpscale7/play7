@@ -6,9 +6,6 @@ import JumpScale.baselib.remote.cuisine
 import JumpScale.lib.docker
 import JumpScale.baselib.redis
 
-# codedirFromHost=""  #to not map the code dir
-codedirFromHost="# /opt/code:/opt/code"
-
 redis=j.clients.redis.getRedisClient("localhost",9999)
 
 def docker_create_machine(reset=False,image='despiegk/mc'):
@@ -16,7 +13,7 @@ def docker_create_machine(reset=False,image='despiegk/mc'):
     key="play:docker:%s:%s"%(name,image)
     if reset or not redis.exists(key):
         ports="8086:8086 8083:8083 28017:28017 27017:27017 5544:5544 82:82"
-        vols="/opt/jumpscale/var/influxdb:/var/mydocker/influxdb # /opt/jumpscale/var/mongodb:/var/mydocker/mongodb %s"%codedirFromHost
+        vols="/opt/jumpscale/var/influxdb:/var/mydocker/influxdb # /opt/jumpscale/var/mongodb:/var/mydocker/mongodb"
         port=j.tools.docker.create(name=name, ports=ports, vols=vols, volsro='', stdout=True, base=image, nameserver='8.8.8.8', \
             replace=True, cpu=None, mem=0,jumpscale=True)
         redis.set(key,str(port))
