@@ -6,3 +6,7 @@ curl https://raw.githubusercontent.com/Jumpscale/jumpscale_core7/master/install/
 cd /tmp
 python /tmp/bootstrap_web.py
 
+jpackage install -n docker
+jpackage install -n kvm
+jpackage install -n ubuntukernel
+
