@@ -14,11 +14,11 @@ jsconfig hrdset -n whoami.git.passwd -v ''
 jpackage install -n docker
 jpackage install -n kvm
 
-apt-get install linux-image-generic -f
+apt-get install linux-image-generic -f -y
 mkdir -p ~/ovh.d/
 sudo mv /etc/grub.d/06_OVHkernel ~/ovh.d
 sudo update-grub
-sudo apt-get install linux-headers-generic -f
+sudo apt-get install linux-headers-generic -f -y
 
 echo INSTALL DONE
 
