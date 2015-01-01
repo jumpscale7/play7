@@ -35,3 +35,6 @@ sudo apt-get install linux-headers-generic -f -y
 echo INSTALL DONE
 
 echo 'INSTALL DONE' >> /opt/jumpscale7/done.txt
+
+reboot
+
