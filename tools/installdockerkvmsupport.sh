@@ -20,4 +20,5 @@ sudo mv /etc/grub.d/06_OVHkernel ~/ovh.d
 sudo update-grub
 sudo apt-get install linux-headers-generic -f
 
+echo INSTALL DONE
 
