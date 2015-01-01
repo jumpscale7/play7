@@ -15,7 +15,7 @@ jpackage install -n docker
 jpackage install -n kvm
 
 apt-get install linux-image-generic -f
-mkdir ~/ovh.d/
+mkdir -p ~/ovh.d/
 sudo mv /etc/grub.d/06_OVHkernel ~/ovh.d
 sudo update-grub
 sudo apt-get install linux-headers-generic -f
