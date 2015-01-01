@@ -12,10 +12,10 @@ python /tmp/bootstrap_web.py
 #jsconfig hrdset -n whoami.git.login -v ''
 #jsconfig hrdset -n whoami.git.passwd -v ''
 
-echo 'whoami.email =' > /opt/jumpscale7/hrd/system/whoami.hrd
-echo 'whoami.fullname =' >> /opt/jumpscale7/hrd/system/whoami.hrd
-echo 'whoami.git.login =' >> /opt/jumpscale7/hrd/system/whoami.hrd
-echo 'whoami.git.passwd =' >> /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'email =' > /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'fullname =' >> /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'git.login =' >> /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'git.passwd =' >> /opt/jumpscale7/hrd/system/whoami.hrd
 
 echo 'HRD SET' >> /opt/jumpscale7/done.txt
 
