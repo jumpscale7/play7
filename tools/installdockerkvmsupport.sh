@@ -6,10 +6,17 @@ curl https://raw.githubusercontent.com/Jumpscale/jumpscale_core7/master/install/
 cd /tmp
 python /tmp/bootstrap_web.py
 
-jsconfig hrdset -n whoami.email -v ''
-jsconfig hrdset -n whoami.fullname -v ''
-jsconfig hrdset -n whoami.git.login -v ''
-jsconfig hrdset -n whoami.git.passwd -v ''
+##NEED TO FIX
+#jsconfig hrdset -n whoami.email -v ''
+#jsconfig hrdset -n whoami.fullname -v ''
+#jsconfig hrdset -n whoami.git.login -v ''
+#jsconfig hrdset -n whoami.git.passwd -v ''
+
+echo 'whoami.email =' > /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'whoami.fullname =' >> /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'whoami.git.login =' >> /opt/jumpscale7/hrd/system/whoami.hrd
+echo 'whoami.git.passwd =' >> /opt/jumpscale7/hrd/system/whoami.hrd
+
 echo 'HRD SET' >> /opt/jumpscale7/done.txt
 
 jpackage install -n docker
