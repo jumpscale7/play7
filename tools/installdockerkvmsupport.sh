@@ -8,5 +8,11 @@ python /tmp/bootstrap_web.py
 
 jpackage install -n docker
 jpackage install -n kvm
-jpackage install -n ubuntukernel
+
+apt-get install linux-image-generic -f
+mkdir ~/ovh.d/
+sudo mv /etc/grub.d/06_OVHkernel ~/ovh.d
+sudo update-grub
+sudo apt-get install linux-headers-generic -f
+
 
