@@ -26,8 +26,7 @@ echo 'KVM DONE' >> /opt/jumpscale7/done.txt
 
 apt-get install linux-image-generic -f -y
 echo 'APT KERNEL DONE' >> /opt/jumpscale7/done.txt
-mkdir -p ~/ovh.d/
-sudo mv /etc/grub.d/06_OVHkernel ~/ovh.d
+sudo rm -rf /etc/grub.d/06_OVHkernel
 sudo update-grub
 echo 'GRUB DONE' >> /opt/jumpscale7/done.txt
 sudo apt-get install linux-headers-generic -f -y
