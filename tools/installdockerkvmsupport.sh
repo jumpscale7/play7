@@ -35,5 +35,5 @@ echo INSTALL DONE
 
 echo 'INSTALL DONE' >> /opt/jumpscale7/done.txt
 
-reboot
+#reboot
 
