@@ -1,3 +1,5 @@
+#@todo rewrite with ays
+#can put ays in play repo
 
 from JumpScale import j
 from fabric.api import *
