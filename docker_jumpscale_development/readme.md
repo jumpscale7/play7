@@ -5,7 +5,7 @@ see to install docker & kvm support
 - https://github.com/Jumpscale/play7/blob/master/tools/installdockerkvmsupport.sh
 
 ```python
-jpackage install -n docker
+ays install -n docker
 
 #login (probably not required)
 docker login
