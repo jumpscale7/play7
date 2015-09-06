@@ -1,6 +1,7 @@
 apt-get update
 apt-get upgrade
 apt-get install mc curl git ssh python2.7 python-requests resolvconf -y
+
 set -ex
 rm -f /tmp/install.py
 curl https://github.com/Jumpscale/jumpscale_core7/blob/master/install/install.sh > /tmp/install.py
@@ -22,8 +23,6 @@ echo 'KVM DONE' >> /opt/jumpscale7/done.txt
 #sudo apt-get install linux-headers-generic -f -y
 
 echo INSTALL DONE
-
 echo 'INSTALL DONE' >> /opt/jumpscale7/done.txt
 
 #reboot
-
