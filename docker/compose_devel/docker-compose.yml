@@ -8,7 +8,7 @@ devel:
   links:
    - redis
    - influxdb
-   - mongo
+   - mongodb
 influxdb:
   image: jumpscale/influxdb  
   ports:
