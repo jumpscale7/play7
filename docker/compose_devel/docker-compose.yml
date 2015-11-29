@@ -1,0 +1,26 @@
+devel:
+  image: jumpscale/ubuntu1510_python3
+  ports:
+   - "2022:22"
+  volumes:
+   - .:/code
+   - ../../../:/opt/code/github/jumpscale
+  links:
+   - redis
+   - influxdb
+   - mongo
+influxdb:
+  image: jumpscale/influxdb  
+  ports:
+   - "8083:8083"
+   - "8086:8086"   
+   - "3000:3000"
+mongodb:
+  image: jumpscale/mongo
+  ports:
+   - "27017:27017"
+   - "28017:28017"
+redis:
+  image: gurpartap/redis
+  ports:
+   - "6379:6379"
