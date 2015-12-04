@@ -9,6 +9,7 @@ devel:
    - redis
    - influxdb
    - mongodb
+   - gogs
 influxdb:
   image: jumpscale/influxdb  
   ports:
@@ -24,3 +25,10 @@ redis:
   image: gurpartap/redis
   ports:
    - "6379:6379"
+gogs:
+  image: gogs/gogs
+  ports:
+   - "10022:22"   
+   - "3001:3000"   
+  volumes:
+   - ../../../../../data/gogs:/data
